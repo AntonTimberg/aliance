@@ -33,6 +33,16 @@ body {
   left: 0;
   top: 0;
   z-index: 2;
+  transition: background-color 0.2s;
+}
+
+.navbar-light {
+  background-color: #fff;
+  color: rgb(41, 45, 51);
+}
+
+.navbar-light .header-logo-path {
+  fill: rgb(41, 45, 51); 
 }
 
 .header {
