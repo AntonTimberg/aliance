@@ -22,16 +22,19 @@ body {
 }
 
 .navbar {
-  /* background-color: rgb(45, 45, 45); */
   display: flex;
   align-items: center;
   color: #fff;
   height: 94px;
   position: relative;
   border-bottom: 1px solid rgba(235, 235, 240, 0.2);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
 
 .header {
+  padding: 94px;
   min-height: 100vh;
 }
 
@@ -141,26 +144,105 @@ body {
 }
 
 .header-features {
-    display: flex;
-    min-height: 168px;
-    padding: 0;
-    margin-top: 100px;
-    list-style: none;
-    color: #fff;
-    position: relative;
+  display: flex;
+  min-height: 168px;
+  padding: 0;
+  margin-top: 100px;
+  list-style: none;
+  color: #fff;
+  position: relative;
 }
 
 .header-features-item {
-    padding: 30px 50px;
-    border: 1px solid rgba(235, 235, 240, 0.2);
+  padding: 30px 50px;
+  border: 1px solid rgba(235, 235, 240, 0.2);
 }
 
 .header-features-text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 160%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
 }
 
 .header-features-item:not(:last-child) {
-    border-right: none;
+  border-right: none;
+}
+
+.section {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.section-title {
+  font-family: "Bebas Neue Book";
+  color: rgb(41, 45, 51);
+  font-size: 60px;
+  line-height: 120%;
+}
+
+.steps {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 30px;
+}
+
+.steps-item {
+  max-width: 330px;
+}
+
+.steps-num {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+  color: #5c8ee6;
+  font-family: "Bebas Neue Book";
+  display: flex;
+  align-items: center;
+}
+
+.steps-num::after {
+  content: "";
+  height: 1px;
+  background: #ebebf0;
+  width: 100%;
+  margin-left: 30px;
+}
+
+.steps-title {
+  /* h3 */
+  color: rgb(41, 45, 51);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 160%;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.steps-text {
+  /* p */
+  color: rgb(130, 138, 153);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.steps-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height:160%;
+  color: #5c8ee6;
+}
+
+.steps-link::before {
+  content: "";
+  height: 1px;
+  background: #5c8ee6;
+  width: 40px;
+  margin-right: 20px;
 }
