@@ -6,7 +6,6 @@
 
 @font-face {
   font-family: "Bebas Neue Book";
-  /* src: url('BebasNeueRegular.eot'); */
   src: url("../fonts/BebasNeueBook.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -47,8 +46,7 @@ body {
 }
 
 .header {
-  padding: 94px;
-  min-height: 100vh;
+  padding: 94px 80px 0 80px;
 }
 
 .header-image {
@@ -57,6 +55,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  min-height: 970px;
 }
 
 .header-image::before {
@@ -128,54 +127,68 @@ body {
   height: 100%;
 }
 
-.seporator {
+.separator {
   background: rgb(92, 142, 230);
   width: 150px;
   height: 2px;
 }
 
 .header-content {
-  padding: 150px;
+  padding: 149px 0px 80px;
   position: relative;
   z-index: 1;
   color: #fff;
 }
 
 .header-title {
-  max-width: 1080px;
+  max-width: 1000px;
   font-family: "Bebas Neue Book";
-  font-size: 80px;
-  line-height: 120%;
-  margin: 30px 0;
+  font-size: 76px;
+  margin: 24px 25px 0 0;
+  line-height: 125%;
+  letter-spacing: 1.5px;
 }
 
 .header-text {
-  max-width: 720px;
+  max-width: 650px;
   font-style: normal;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 380;
   line-height: 160%;
+  margin-top: 40px;
   margin-bottom: 50px;
 }
 
 .header-features {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); 
   display: flex;
-  min-height: 168px;
-  padding: 0;
-  margin-top: 100px;
+  justify-content: space-between;
+  align-items: center;
+  
+  width: 100%;
+  max-width: 1440px;
+  
   list-style: none;
   color: #fff;
-  position: relative;
+  min-height: 168px;
+  margin-top: 0; 
+  padding: 0; 
+  z-index: 2;
 }
 
 .header-features-item {
-  padding: 30px 50px;
+  flex: 1;
+  padding: 30px 56px;
   border: 1px solid rgba(235, 235, 240, 0.2);
 }
 
 .header-features-text {
   font-weight: 400;
   font-size: 16px;
+  padding: 18px 0 0 0;
   line-height: 160%;
 }
 
@@ -193,21 +206,35 @@ body {
   color: rgb(41, 45, 51);
   font-size: 60px;
   line-height: 120%;
+  position: relative;
+  margin-bottom: 40px;
+  margin-top: 26px;
+}
+
+.section-title::before {
+  /* content: ""; */
+  display: block;
+  width: 70px;
+  height: 2px;
+  background-color: #5c8ee6;
+  margin-bottom: 15px;
 }
 
 .steps {
   display: flex;
   list-style: none;
   padding: 0;
-  gap: 30px;
+  gap: 0px;
+  justify-content: space-between;
 }
 
 .steps-item {
-  max-width: 330px;
+  max-width: 300px;
 }
 
 .steps-num {
-  font-weight: 400;
+  margin-top: 10px;
+  font-weight: 500;
   font-size: 48px;
   line-height: 120%;
   color: #5c8ee6;
@@ -221,11 +248,10 @@ body {
   height: 1px;
   background: #ebebf0;
   width: 100%;
-  margin-left: 30px;
+  margin-left: 35px;
 }
 
 .steps-title {
-  /* h3 */
   color: rgb(41, 45, 51);
   font-size: 28px;
   font-weight: 400;
@@ -235,7 +261,6 @@ body {
 }
 
 .steps-text {
-  /* p */
   color: rgb(130, 138, 153);
   font-size: 16px;
   font-weight: 400;
@@ -261,3 +286,4 @@ body {
   width: 40px;
   margin-right: 20px;
 }
+
