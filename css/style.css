@@ -205,6 +205,9 @@ body {
   border-right: 0.0625rem solid rgba(235, 235, 240, 0.2);
 }
 
+.header-features-item:last-child use {
+  fill: #5c8ee6 !important; 
+}
 
 .slider-buttons {
   display: none;
