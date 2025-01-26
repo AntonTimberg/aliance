@@ -4,13 +4,13 @@ const mMenuToggle = document.querySelector(".mobile-menu-toggle");
 const menu = document.querySelector(".mobile-menu");
 
 const lightModeOn = () => {
-    navbar.classList.add("navbar-light");
-    logo.href.baseVal = "img/sprites.svg#logo";
+  navbar.classList.add("navbar-light");
+  logo.href.baseVal = "img/sprites.svg#logo";
 };
 
 const darkModeOn = () => {
-    navbar.classList.remove("navbar-light");
-    logo.href.baseVal = "img/sprites.svg#logo-light";
+  navbar.classList.remove("navbar-light");
+  logo.href.baseVal = "img/sprites.svg#logo-light";
 };
 
 const openMenu = (event) => {
@@ -36,4 +36,26 @@ mMenuToggle.addEventListener("click", (event) => {
   menu.classList.contains("is-open") ? closeMenu() : openMenu();
 });
 
-  
+const swiper = new Swiper(".swiper", {
+  speed: 400,
+  autoHeight: true,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".slider-button-next",
+    prevEl: ".slider-button-prev",
+  },
+  breakpoints: {
+    576: {
+        slidesPerView: 2,
+    },
+    768: {
+        slidesPerView: 3,
+    } ,
+    1024: {
+        slidesPerView: 4,
+    },
+    1200: {
+        slidesPerView: 5,
+    },
+  },
+});
