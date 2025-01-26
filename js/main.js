@@ -54,7 +54,7 @@ const swiper = new Swiper(".swiper", {
     1024: {
         slidesPerView: 4,
     },
-    1200: {
+    1201: {
         slidesPerView: 5,
     },
   },

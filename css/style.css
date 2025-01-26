@@ -1,6 +1,3 @@
-/* style.css */
-
-/* Существующие базовые стили — начало */
 * {
   margin: 0;
   padding: 0;
@@ -186,16 +183,7 @@ body {
   margin-bottom: 3.125rem;
 }
 
-/* -----------------------------
-   ИЗМЕНЁН БЛОК .header-features
-   УБРАНО position: absolute;
-   ДОБАВЛЕНО margin-top
------------------------------- */
 .header-features {
-  /* position: absolute;   УДАЛЕНО (ДОБАВЛЕНО КОММЕНТАРИЕМ) */
-  /* bottom: 0;           УДАЛЕНО */
-  /* left: 50%;           УДАЛЕНО */
-  /* transform: translateX(-50%);  УДАЛЕНО */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -204,19 +192,19 @@ body {
   list-style: none;
   color: #fff;
   min-height: 10.5rem;
-  margin-top: 2rem; /* ДОБАВЛЕНО: чтобы отделить слайдер ниже блока */
+  margin-top: 2rem;
   padding: 0;
   z-index: 2;
 }
 
-/* Сами карточки (слайды) */
 .header-features-item {
-  /* width: 18rem;  УДАЛЕНО (жёсткая ширина мешала) */
-  width: auto; /* ДОБАВЛЕНО: Теперь Swiper сам подгонит */
+  width: auto;
   min-height: 100%;
   padding: 1.875rem 3.5rem;
   border: 0.0625rem solid rgba(235, 235, 240, 0.2);
+  border-right: 0.0625rem solid rgba(235, 235, 240, 0.2);
 }
+
 
 .slider-buttons {
   display: none;
@@ -239,14 +227,6 @@ body {
   font-size: 1rem;
   padding: 1.125rem 0 0 0;
   line-height: 160%;
-}
-
-.header-features-item:not(:last-child) {
-  border-right: none;
-}
-
-.header-features-item:last-child .header-features-icon use {
-  fill: #5c8ee6;
 }
 
 .section {
@@ -339,7 +319,7 @@ body {
   margin-right: 1.25rem;
 }
 
-/* -------- Media Queries -------- */
+/* Медиа-запросы */
 @media (max-width: 1700px) {
   html {
     font-size: 0.875rem;
@@ -416,14 +396,14 @@ body {
     padding: 1.8rem;
     border-right: 1px solid rgba(235, 235, 240, 0.2);
   }
-  
+
   .mobile-menu-line {
     height: 1px;
     background-color: #fff;
     width: 100%;
     transition: transform 0.2s;
   }
-  
+
   .mobile-menu-line:nth-child(2) {
     width: 80%;
   }
@@ -524,7 +504,7 @@ body {
     transform: rotate(-45deg) translateY(-9px);
   }
   .close-menu .mobile-menu-line {
-    background-color: #292D33;
+    background-color: #292d33;
   }
 }
 
@@ -550,5 +530,7 @@ body {
   .header-content {
     padding-top: 2rem;
   }
+  .header-content {
+    padding: 9.3125rem 0rem 2rem;
+  }
 }
-/* Существующие базовые стили — конец */
