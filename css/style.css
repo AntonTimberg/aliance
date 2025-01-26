@@ -392,15 +392,13 @@ body {
     height: 1px;
     background-color: #fff;
     width: 100%;
+    transition: transform 0.2s;
   }
   
   .mobile-menu-line:nth-child(2) {
     width: 80%;
   }
 
-  .menu-opened .mobile-menu-line {
-    background-color: #292D33;
-  }
   .navbar-button .button-text {
     display: none;
   }
@@ -485,5 +483,19 @@ body {
     font-size: 14px;
     line-height: 160%;
     color: #292d33;
+  }
+  .close-menu .mobile-menu-line:nth-child(2) {
+    display: none;
+  }
+  .close-menu .mobile-menu-line:nth-child(1) {
+    margin-top: 1px;
+    transform: rotate(45deg) translateY(9px);
+  }
+  .close-menu .mobile-menu-line:nth-child(3) {
+    margin-bottom: 1px;
+    transform: rotate(-45deg) translateY(-9px);
+  }
+  .close-menu .mobile-menu-line{
+    background-color: #292D33;
   }
 }

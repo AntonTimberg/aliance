@@ -1,35 +1,39 @@
-const navbar = document.querySelector('.navbar');
-const logo = document.querySelector('.logo-svg use');
-const mMenuToggle = document.querySelector('.mobile-menu-toggle');
-const menu = document.querySelector('.mobile-menu');
+const navbar = document.querySelector(".navbar");
+const logo = document.querySelector(".logo-svg use");
+const mMenuToggle = document.querySelector(".mobile-menu-toggle");
+const menu = document.querySelector(".mobile-menu");
 
-window.addEventListener('scroll', () => {
-    if (menu.classList.contains('is-open')) {
-        return;
-    }
+const lightModeOn = () => {
+    navbar.classList.add("navbar-light");
+    logo.href.baseVal = "img/sprites.svg#logo";
+};
 
-    if (window.scrollY > 1) {
-        navbar.classList.add("navbar-light");
-        logo.href.baseVal = "img/sprites.svg#logo";
-    } else {
-        navbar.classList.remove("navbar-light");
-        logo.href.baseVal = "img/sprites.svg#logo-light";
-    }
-}); 
+const darkModeOn = () => {
+    navbar.classList.remove("navbar-light");
+    logo.href.baseVal = "img/sprites.svg#logo-light";
+};
 
-mMenuToggle.addEventListener('click', (event) => {
-    event.preventDefault();
-    menu.classList.toggle("is-open");
+const openMenu = (event) => {
+  menu.classList.add("is-open");
+  mMenuToggle.classList.add("close-menu");
+  document.body.style.overflow = "hidden";
+  lightModeOn();
+};
 
-    mMenuToggle.classList.toggle("menu-opened");
+const closeMenu = (event) => {
+  menu.classList.remove("is-open");
+  mMenuToggle.classList.remove("close-menu");
+  document.body.style.overflow = "auto";
+  darkModeOn();
+};
 
-    if (menu.classList.contains('is-open')) {
-        logo.href.baseVal = "img/sprites.svg#logo";
-    } else {
-        if (window.scrollY > 1) {
-            logo.href.baseVal = "img/sprites.svg#logo";
-        } else {
-            logo.href.baseVal = "img/sprites.svg#logo-light";
-        }
-    }
+window.addEventListener("scroll", () => {
+  window.scrollY > 1 ? lightModeOn() : darkModeOn();
 });
+
+mMenuToggle.addEventListener("click", (event) => {
+  event.preventDefault();
+  menu.classList.contains("is-open") ? closeMenu() : openMenu();
+});
+
+  
