@@ -381,6 +381,12 @@ body {
   .slider-buttons {
     display: flex;
   }
+  .swiper-wrapper .swiper-slide:nth-child(4) {
+    border-right: 2px solid rgba(235, 235, 240, 0.2);
+  }
+  .swiper-wrapper .swiper-slide:nth-child(5) {
+    border-right: 1px solid rgba(235, 235, 240, 0.2);
+  }
 }
 
 @media (max-width: 1068px) {
