@@ -96,6 +96,8 @@ body {
 
 .header-nav {
   display: flex;
+  align-items: center;
+  height: 100%;
   flex-basis: 100%;
   list-style: none;
   padding: 0 3.125rem;
@@ -103,14 +105,43 @@ body {
   position: relative;
 }
 
+.header-nav-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .header-nav-item:not(:last-child) {
   margin-right: 2%;
 }
 
 .header-nav-link {
+  display: flex;
+  height: 100%;
+  align-items: center;
   text-decoration: none;
   font-size: 1rem;
   color: inherit;
+  position: relative;
+}
+
+.header-nav-link:after {
+  content: "";
+  width: 0px;
+  position: absolute;
+  bottom: -1px;
+  height: 2px;
+  background-color: #5c8ee6;
+  transition: width 0.2s;
+  right: 0;
+  left: auto;
+}
+
+.header-nav-link:hover::after {
+  /* transform: scaleX(1); */
+  width: 100%;
+  right: auto;
+  left: 0;
 }
 
 .header-phone {
@@ -320,6 +351,11 @@ body {
   background: #5c8ee6;
   width: 2.5rem;
   margin-right: 1.25rem;
+  transition: width 0.2s;
+}
+
+.steps-link:hover::before {
+  width: 60px;
 }
 
 .steps-buttons {
@@ -335,6 +371,57 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex-basis: 33%;
+  border: 1px solid #ebebf0;
+  position: relative;
+  text-decoration: none;
+  transition: border 0.2s;
+}
+
+.card:hover .card-title{
+  color: #5c8ee6;
+}
+
+.card:hover {
+  border: 1px solid #5c8ee6;
+}
+
+.card-content {
+  padding: 2.5rem 3.125rem;
+}
+
+.card-title {
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 140%;
+  color: #292d33;
+  margin-top: 0;
+  margin-bottom: 0.625rem;  
+  transition: color 0.2s;
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 160%;
+  color: #828a99;
+  margin-bottom: 24.625rem;
+}
+
+.card-image {
+  max-width: 100%;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  width: 90%;
 }
 /* Медиа-запросы */
 @media (max-width: 1700px) {
@@ -401,7 +488,9 @@ body {
   .swiper-wrapper .swiper-slide:nth-child(5) {
     border-right: 1px solid rgba(235, 235, 240, 0.2);
   }
-  
+  .card {
+    flex-basis: 50%;
+  }
 }
 
 @media (max-width: 1068px) {
@@ -617,6 +706,9 @@ body {
   .steps-item {
     width: 100%;
     max-width: none;
+  }
+  .card {
+    flex-basis: 100%;
   }
 }
 
