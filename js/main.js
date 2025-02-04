@@ -36,6 +36,14 @@ mMenuToggle.addEventListener("click", (event) => {
   menu.classList.contains("is-open") ? closeMenu() : openMenu();
 });
 
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 1) {
+    mMenuToggle.classList.add("burger-gray");
+  } else {
+    mMenuToggle.classList.remove("burger-gray");
+  }
+});
+
 const swiper = new Swiper(".features-slider", {
   speed: 400,
   autoHeight: true,
