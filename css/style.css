@@ -168,6 +168,10 @@ body {
   display: inline-block;
 }
 
+.button:hover {
+  background: #3A71D1;
+}
+
 .navbar-button {
   flex-shrink: 0;
   height: 100%;
