@@ -544,6 +544,7 @@ body {
 
 .clients-content .section-title {
   margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .clients-list {
@@ -560,6 +561,7 @@ body {
   font-style: 1rem;
   line-height: 160%;
   color: #292d33;
+  padding-top: 1.25rem;
 }
 
 .clients-logo-list {
