@@ -365,14 +365,19 @@ body {
 
 .steps-buttons {
   display: none;
-  height: 40px;
-  justify-content: flex-end;
 }
-.steps-button-prev,
-.steps-button-next {
+
+.primary-buttons-wrapper{
+  height: 60px;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.primary-button-prev,
+.primary-button-next {
   background: #5c8ee6;
   height: 100%;
-  width: 60px;
+  width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -604,6 +609,71 @@ body {
   justify-content: end;
 }
 
+.blog-card {
+  position: relative;
+
+  display: flex;
+  min-height: 25rem;
+  flex-direction: column;
+  text-decoration: none;
+  color: #ffffff;
+  justify-content: flex-end;
+  
+  padding: 3.125rem;
+}
+
+.blog-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(41, 45, 51, 0.6);
+  z-index: -1;
+}
+.blog-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: -2;
+}
+.blog-card-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 160%; 
+  margin-bottom: .625rem;
+  margin-top: 0;
+}
+.blog-card-text{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 160%; 
+  margin: 0;
+}
+.blog-slider-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.875rem;
+}
+
+.blog-card-content {
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  bottom: 3.125rem;
+}
+
+/* .blog-card-content {
+  margin-top: auto;
+} */
 /* Медиа-запросы */
 @media (max-width: 1700px) {
   html {
@@ -681,9 +751,7 @@ body {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  .slider-buttons {
-    display: flex;
-  }
+
   .swiper-wrapper .swiper-slide:nth-child(4) {
     border-right: 2px solid rgba(235, 235, 240, 0.2);
   }
@@ -694,6 +762,7 @@ body {
     flex-basis: 50%;
   }
   .slider-buttons {
+    display: flex;
     display: block;
     position: relative;
     margin-top: 0.5rem;
@@ -764,6 +833,15 @@ body {
 
   .clients-logo-item:nth-child(9) {
     display: none;
+  }
+
+  .primary-buttons-wrapper {
+    height: 40px;
+  }
+
+  .primary-button-prev,
+  .primary-button-next {
+    width: 60px;
   }
 }
 
@@ -995,6 +1073,7 @@ body {
   .steps-buttons {
     display: flex;
   }
+
   .clients-wrapper{
     flex-direction: column;
     align-items: center;
