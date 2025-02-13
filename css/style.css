@@ -169,7 +169,7 @@ body {
 }
 
 .button:hover {
-  background: #3A71D1;
+  background: #3a71d1;
 }
 
 .navbar-button {
@@ -367,7 +367,7 @@ body {
   display: none;
 }
 
-.primary-buttons-wrapper{
+.primary-buttons-wrapper {
   height: 60px;
   justify-content: flex-end;
   display: flex;
@@ -435,11 +435,11 @@ body {
   width: 90%;
 }
 
-.trademark-cards{
+.trademark-cards {
   display: flex;
 }
 
-.trademark-card{
+.trademark-card {
   flex-basis: 50%;
   border: 1px solid #ebebf0;
   text-decoration: none;
@@ -449,18 +449,17 @@ body {
   grid-template-columns: 180px 1fr;
   grid-template-rows: repeat(2, 2fr);
   grid-column-gap: 3.125rem;
-  grid-template-areas: 
-  "logo title title" 
-  "logo text text"
-  ;
+  grid-template-areas:
+    "logo title title"
+    "logo text text";
 }
-.trademark-card-logo{
+.trademark-card-logo {
   grid-area: logo;
-  fill: #828A99;
+  fill: #828a99;
   width: 100%;
   align-self: center;
 }
-.trademark-card-title{
+.trademark-card-title {
   font-weight: 400;
   margin: 0;
 
@@ -469,7 +468,7 @@ body {
   color: #292d33;
   grid-area: title;
 }
-.trademark-card-text{
+.trademark-card-text {
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
@@ -478,17 +477,17 @@ body {
   grid-area: text;
   margin-top: -20px;
 }
-.trademark-card:hover{
+.trademark-card:hover {
   border-color: #5c8ee6;
 }
 
-.trademark-card:hover .trademark-card-logo{
+.trademark-card:hover .trademark-card-logo {
   fill: #5c8ee6;
 }
 
-.trademark-card:hover .trademark-card-title{
+.trademark-card:hover .trademark-card-title {
   color: #5c8ee6;
-} 
+}
 
 .mobile-menu-toggle.burger-gray .mobile-menu-line {
   background-color: #828a99;
@@ -499,7 +498,7 @@ body {
   position: relative;
   margin-bottom: 0;
 }
-.founder-photo{
+.founder-photo {
   position: absolute;
   left: 0;
   width: 43%;
@@ -508,12 +507,12 @@ body {
   object-fit: cover;
   object-position: top;
 }
-.founder-content{
+.founder-content {
   min-width: 45rem;
   margin-right: 3rem;
   padding-top: 3rem;
 }
-.founder-content-wrapper{
+.founder-content-wrapper {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
@@ -576,7 +575,6 @@ body {
 }
 
 .clients-logo-item {
-  
   flex-basis: 33%;
   border: 1px solid #ebebf0;
   display: flex;
@@ -602,7 +600,6 @@ body {
 }
 
 .clients-logo {
-
   display: grid;
   grid-template-columns: repeat(3, 15rem);
   grid-template-rows: repeat(3, 10rem);
@@ -618,7 +615,7 @@ body {
   text-decoration: none;
   color: #ffffff;
   justify-content: flex-end;
-  
+
   padding: 3.125rem;
 }
 
@@ -645,18 +642,18 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 1.75rem;
-  line-height: 160%; 
-  margin-bottom: .625rem;
+  line-height: 160%;
+  margin-bottom: 0.625rem;
   margin-top: 0;
 }
-.blog-card-text{
+.blog-card-text {
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 160%; 
+  line-height: 160%;
   margin: 0;
 }
-.blog-slider-footer{
+.blog-slider-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -677,9 +674,8 @@ body {
 
 .bg-grey {
   background: #f0f2f5;
-  
 }
-.section-cta{
+.section-cta {
   position: relative;
   padding-top: 6.25rem;
   margin-top: 9.375rem;
@@ -694,18 +690,18 @@ body {
   width: 40%;
   top: -78px;
 }
-.cta-form-wrapper{
+.cta-form-wrapper {
   display: flex;
   justify-content: flex-end;
   padding-right: 12.125rem;
 }
-.cta-form{
- min-width: 52.5rem; 
+.cta-form {
+  min-width: 52.5rem;
 }
 .cta-form-text {
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 160%;
   color: #828a99;
   margin-top: 1.375rem;
@@ -715,14 +711,12 @@ body {
 .input-group-wrapper {
   display: flex;
   gap: 1.875rem;
-
 }
 .input-group {
   position: relative;
   height: 66px;
   flex-grow: 1;
   background-color: #f0f2f5;
-
 }
 .input {
   width: 100%;
@@ -734,7 +728,7 @@ body {
   border: 1px solid #e4e4eb;
   background-color: transparent;
 }
-.input-group-label{
+.input-group-label {
   position: absolute;
   cursor: text;
   top: 1.5rem;
@@ -749,10 +743,11 @@ body {
   border: 1px solid #5c8ee6;
   outline: 0;
 }
-.input:focus ~ .input-group-label, .input:not(:placeholder-shown).input:not(:focus) ~ .input-group-label {
+.input:focus ~ .input-group-label,
+.input:not(:placeholder-shown).input:not(:focus) ~ .input-group-label {
   top: -0.5rem;
   left: 1.25rem;
-  font-size: .625rem;
+  font-size: 0.625rem;
   background-color: inherit;
   padding: 0 10px;
 }
@@ -769,7 +764,7 @@ body {
 .notify {
   display: flex;
   align-items: flex-start;
-  gap: .625rem;
+  gap: 0.625rem;
 }
 .notify-icon {
   flex-shrink: 0;
@@ -778,30 +773,49 @@ body {
   min-width: 23.75rem;
   font-style: normal;
   font-weight: 400;
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 160%;
   color: #828a99;
   margin: 0;
 }
 /* Медиа-запросы */
-@media (max-width: 1889px) {
+@media (max-width: 2050px) {
   .section-cta {
     padding-top: 2rem;
     padding-bottom: 6rem;
-    margin-top: 6rem;        
+    margin-top: 6rem;
   }
-  
+
   .cta-image {
     min-width: auto;
     width: 70%;
     max-width: 600px;
-    top: -62px;              
+    top: -62px;
     left: 0;
   }
-  
+
   .cta-form-wrapper {
     padding-right: 11rem;
     max-height: 326px;
+  }
+}
+
+@media (max-width: 1890px) {
+  .cta-form-wrapper {
+    padding-right: 7rem;
+  }
+}
+
+@media (max-width: 1810px) {
+  
+  .cta-form-wrapper {
+    padding-right: 4rem;
+  }
+}
+
+@media (max-width: 1710px) {
+  .cta-form-wrapper {
+    padding-right: 2rem;
   }
 }
 
@@ -809,7 +823,25 @@ body {
   html {
     font-size: 0.875rem;
   }
-  
+
+  .cta-image {
+    max-width: 580px;
+  }
+}
+
+@media (max-width: 1620px) {
+  .cta-image {
+    display: none;
+  }
+  .cta-form-wrapper {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1480px) {
+  .cta-form-wrapper {
+    padding-right: 4rem;
+  }
 }
 
 @media (max-width: 1460px) {
@@ -831,12 +863,23 @@ body {
   .header-phone {
     margin-right: 2rem;
   }
+
+  .cta-image {
+    /* min-width: auto;
+    width: 70%; */
+    
+    /* top: -62px; */
+    /* left: 0; */
+  }
 }
 
 @media (max-width: 1324px) {
   .header-nav {
     justify-content: space-between;
   }
+
+  
+
   .header-nav-item,
   .header-phone {
     align-items: center;
@@ -847,25 +890,74 @@ body {
   }
 }
 
+@media (max-width: 1270px) {
+  .section-cta {
+    padding-top: 1rem;
+    padding-bottom: 6rem;
+    margin-top: 6rem;
+  }
+
+  
+}
+
 @media (max-width: 1200px) {
-  .founder-content-wrapper{
+  .cta-form-button {
+    margin-bottom: 2rem;
+  }
+
+  .cta-form-wrapper {
+    /* padding-right: 11rem; */
+    max-height: 450px;
+  }
+
+  .input-group-wrapper {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 0.5rem; 
+  }
+
+  .input-group {
+    width: 100%;
+  }
+
+  .cta-form-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .cta-form-button {
+    width: 100%;
+  }
+
+  .notify {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .notify-text {
+    margin-top: 0.5rem;
+  }
+
+  .founder-content-wrapper {
     margin-left: calc(43% + 1rem);
   }
 
-  .trademark-card{
+  .trademark-card {
     grid-template-columns: auto auto;
   }
 
   .header-features-item:first-child {
     margin-left: 2rem;
   }
-  
+
   .header-features-item {
     display: flex;
     width: 250px;
     height: 140px;
     flex-grow: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     z-index: 3;
     position: relative;
   }
@@ -974,6 +1066,18 @@ body {
   .primary-button-next {
     width: 60px;
   }
+  .cta-image {
+    display: none;
+  }
+  .cta-form-wrapper {
+    
+    display: flex;
+    justify-content: center; /* контент по центру */
+    align-items: center;
+    padding-right: 0; /* убираем правый отступ */
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
 }
 
 @media (max-width: 1140px) {
@@ -990,7 +1094,7 @@ body {
     display: block;
     margin: 0 auto;
     padding: 2rem 1rem;
-    height: auto; 
+    height: auto;
   }
 
   .founder-content {
@@ -1016,8 +1120,6 @@ body {
   .header-nav-item:not(:last-child) {
     margin-right: 1, 5rem;
   }
-
-  
 }
 
 @media (max-width: 1026px) {
@@ -1055,6 +1157,24 @@ body {
 }
 
 @media (max-width: 995px) {
+  .cta-form,
+  .input-group-wrapper,
+  .cta-form-footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
+  }
+  .cta-form {
+    width: 100%;
+  }
+  /* Внутри формы доступная ширина = 100% - 1rem */
+  .input-group,
+  .cta-form-button {
+    width: calc(100% - 4rem);
+    box-sizing: border-box;
+  }
+
+
   .trademark-cards {
     flex-direction: column;
   }
@@ -1205,7 +1325,7 @@ body {
     display: flex;
   }
 
-  .clients-wrapper{
+  .clients-wrapper {
     flex-direction: column;
     align-items: center;
   }
@@ -1213,7 +1333,6 @@ body {
   .clients-logo {
     grid-template-columns: repeat(3, 15rem);
     grid-template-rows: repeat(3, 10rem);
-    
   }
 
   .clients-logo-item:nth-child(9) {
@@ -1223,11 +1342,13 @@ body {
 /* 995 */
 
 @media (max-width: 768px) {
+  
+
   .founder-photo {
     margin: 0;
     padding: 0;
   }
-  
+
   .founder-content-wrapper {
     margin: 0;
     padding: 0;
@@ -1240,10 +1361,10 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .founder-content {
     margin-left: 1rem;
-    margin-right: 1rem; 
+    margin-right: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding: 0;
@@ -1275,7 +1396,6 @@ body {
   }
   .card {
     flex-basis: 100%;
-
   }
   .section {
     /* margin-top: 20px; */
@@ -1294,7 +1414,7 @@ body {
   .separator {
     margin-top: 3rem;
   }
-  
+
   .founder-photo {
     position: relative;
     width: 100%;
@@ -1310,22 +1430,27 @@ body {
   }
 }
 
+@media (max-width: 700px) {
+  
+
+}
+
 @media (max-width: 568px) {
   .trademark-card {
-    grid-template-areas: 
-    "logo title" 
-    "text text";
+    grid-template-areas:
+      "logo title"
+      "text text";
   }
 
   .trademark-card-logo {
     width: 80px;
     height: 90px;
   }
-  
+
   .clients-list {
     columns: 1;
   }
-  
+
   .trademark-card-text {
     margin-bottom: 0px;
     font-size: 1.5rem;
