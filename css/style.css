@@ -690,6 +690,7 @@ body {
   bottom: 0;
   left: 0;
   min-width: 45rem;
+  max-width: 752px;
   width: 40%;
   top: -78px;
 }
@@ -783,6 +784,27 @@ body {
   margin: 0;
 }
 /* Медиа-запросы */
+@media (max-width: 1889px) {
+  .section-cta {
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+    margin-top: 6rem;        
+  }
+  
+  .cta-image {
+    min-width: auto;
+    width: 70%;
+    max-width: 600px;
+    top: -62px;              
+    left: 0;
+  }
+  
+  .cta-form-wrapper {
+    padding-right: 11rem;
+    max-height: 326px;
+  }
+}
+
 @media (max-width: 1700px) {
   html {
     font-size: 0.875rem;
