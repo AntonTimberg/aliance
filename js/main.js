@@ -109,3 +109,33 @@ const swiperBlog = new Swiper(".blog-slider", {
     },
   },
 });
+
+function updateSizes() {
+  let button = document.querySelector('.cta-form-button');
+  let inputGroups = document.querySelectorAll('.input-group');
+
+  if (!button || inputGroups.length === 0) return;
+
+  let maxHeight = 0;
+
+  inputGroups.forEach(input => {
+      maxHeight = Math.max(maxHeight, input.offsetHeight);
+  });
+
+  if (window.innerWidth < 995) {
+      let width = button.offsetWidth + 'px';
+
+      inputGroups.forEach(input => input.style.width = width);
+      button.style.height = maxHeight + 'px';
+      
+  } else {
+      inputGroups.forEach(input => input.style.width = '');
+      button.style.height = '';
+  }
+}
+
+window.addEventListener('load', updateSizes);
+window.addEventListener('resize', updateSizes);
+
+const buttonObserver = new ResizeObserver(updateSizes);
+buttonObserver.observe(document.querySelector('.cta-form-button'));
