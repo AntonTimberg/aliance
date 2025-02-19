@@ -690,6 +690,10 @@ body {
   width: 40%;
   top: -78px;
 }
+.section-title, .cta-form-title {
+  font-size: 3.75rem;
+  margin: 0;
+}
 .cta-form-wrapper {
   display: flex;
   justify-content: flex-end;
@@ -705,20 +709,27 @@ body {
   line-height: 160%;
   color: #828a99;
   margin-top: 1.375rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.75rem;
   max-width: 40rem;
 }
 .input-group-wrapper {
   display: flex;
   gap: 1.875rem;
 }
+
+.input-group-wrapper {
+  display: flex;
+  gap: 1.875rem;
+}
+
 .input-group {
   position: relative;
   height: 66px;
-  flex-grow: 1;
   background-color: #f0f2f5;
+  width: 405px;
 }
 .input {
+  
   width: 100%;
   height: 100%;
   position: absolute;
@@ -728,6 +739,9 @@ body {
   border: 1px solid #e4e4eb;
   background-color: transparent;
 }
+
+
+
 .input-group-label {
   position: absolute;
   cursor: text;
@@ -754,9 +768,10 @@ body {
 
 .cta-form-footer {
   display: flex;
-  margin-top: 1.25rem;
+  margin-top: 1.75rem;
   align-items: center;
   gap: 1.875rem;
+  margin-bottom: 1rem;
 }
 .cta-form-button {
   flex-shrink: 0;
@@ -927,7 +942,7 @@ body {
 /* Медиа-запросы */
 @media (max-width: 2050px) {
   .section-cta {
-    padding-top: 2rem;
+    padding-top: 2.3rem;
     padding-bottom: 6rem;
     margin-top: 6rem;
   }
@@ -986,9 +1001,13 @@ body {
 @media (max-width: 1480px) {
   .cta-form-wrapper {
     padding-right: 4rem;
+
+  }
+
+  .bg-grey.section-cta {
+    padding-top: 5rem;
   }
 }
-
 @media (max-width: 1460px) {
   html {
     font-size: 13px;
@@ -1778,6 +1797,13 @@ body {
 }
 
 @media (max-width: 568px) {
+  .bg-grey.section-cta {
+
+  }
+  .cta-form-title {
+    font-size: 3rem;
+  }
+
   .trademark-card {
     grid-template-areas:
       "logo title"
