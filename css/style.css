@@ -919,6 +919,10 @@ body {
   white-space: nowrap;
 }
 
+.mobile-info-email {
+  text-decoration: none;
+  color: #292d33;
+}
 
 /* Медиа-запросы */
 @media (max-width: 2050px) {
@@ -1208,9 +1212,9 @@ body {
   }
   .cta-form-wrapper {
     display: flex;
-    justify-content: center; /* контент по центру */
+    justify-content: center;
     align-items: center;
-    padding-right: 0; /* убираем правый отступ */
+    padding-right: 0;
     margin: 0 auto;
     margin-top: 2rem;
   }
@@ -1474,6 +1478,7 @@ body {
     align-items: center;
     gap: 1rem;
     margin-bottom: 1rem;
+    text-decoration: none;
   }
   .mobile-info-address,
   .mobile-info-email {
@@ -1483,6 +1488,7 @@ body {
     font-size: 14px;
     line-height: 160%;
     color: #292d33;
+    text-decoration: none;
   }
   .close-menu .mobile-menu-line:nth-child(2) {
     display: none;
@@ -1536,6 +1542,9 @@ body {
   .footer-menu-column-2 {
     min-width: 8.5rem;
   }
+
+  
+
 }
 /* 995 */
 
@@ -1649,6 +1658,7 @@ body {
   .mobile-info-email {
     white-space: nowrap;
     font-size: 16px;
+    text-decoration: none;
   }
 
   .footer-info {
