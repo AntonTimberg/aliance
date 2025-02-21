@@ -139,3 +139,39 @@ window.addEventListener('resize', updateSizes);
 
 const buttonObserver = new ResizeObserver(updateSizes);
 buttonObserver.observe(document.querySelector('.cta-form-button'));
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modalOverlay = document.getElementById("modal-overlay");
+  const openModalBtn = document.querySelector("[data-toggle='modal']");
+  const closeModalBtn = document.getElementById("modal-close");
+
+  if (!modalOverlay || !openModalBtn || !closeModalBtn) {
+    console.error("Ошибка: не найдены элементы модалки.");
+    return;
+  }
+
+  openModalBtn.addEventListener("click", function () {
+    modalOverlay.classList.add("active");
+  });
+
+  function closeModal() {
+    modalOverlay.classList.add("closing");
+    setTimeout(() => {
+      modalOverlay.classList.remove("active", "closing");
+    }, 300);
+  }
+
+  closeModalBtn.addEventListener("click", closeModal);
+
+  modalOverlay.addEventListener("click", function (event) {
+    if (event.target === modalOverlay) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+});

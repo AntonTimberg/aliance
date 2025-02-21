@@ -150,7 +150,7 @@
           Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта:
           высококачественный прототип будущего проекта напрямую зависит от анализа существующих паттернов поведения.
         </p>
-        <button class="button header-button">Подробнее о компании</button>
+        <button class="button header-button" data-toggle="modal">Подробнее о компании</button>
       </div>
       <!-- /.header-content -->
 
@@ -702,6 +702,43 @@
       </div>
     </div>
   </footer>
+
+
+  
+  <button data-toggle="modal" class="open-modal-btn"></button>
+
+  <div class="modal-overlay" id="modal-overlay">
+      <div class="modal">
+          <button class="modal-close" id="modal-close">
+              <svg width="24" height="24">
+                  <use href="img/sprites.svg#closer"></use>
+              </svg>
+          </button>
+          <h2 class="modal-title">Есть вопросы?</h2>
+          <p class="modal-text">
+              Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время, ответит на все интересующие вопросы и поможет даже в самых сложных случаях!
+          </p>
+          <form action="#" class="modal-form">
+              <div class="custom-input-group">
+                  <input id="custom-user-name" type="text" class="custom-input" placeholder=" ">
+                  <label class="custom-input-label" for="custom-user-name">Имя</label>
+              </div>
+              <div class="custom-input-group">
+                  <input id="custom-user-phone" type="tel" class="custom-input" placeholder=" ">
+                  <label class="custom-input-label" for="custom-user-phone">Номер телефона</label>
+              </div>
+              <button type="submit" class="custom-button">Отправить заявку</button>
+          </form>
+          <div class="notify">
+              <svg class="notify-icon" width="14" height="14">
+                  <use href="img/sprites.svg#shield"></use>
+              </svg>
+              <p class="notify-text">
+                  Обращаясь к нам, вы получаете не только<br> профессиональную работу, но и абсолютную<br> конфиденциальность информации!
+              </p>
+          </div>
+      </div>
+  </div>
 
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
