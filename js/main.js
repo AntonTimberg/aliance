@@ -145,11 +145,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const openModalBtn = document.querySelector("[data-toggle='modal']");
   const closeModalBtn = document.getElementById("modal-close");
 
-  if (!modalOverlay || !openModalBtn || !closeModalBtn) {
-    console.error("Ошибка: не найдены элементы модалки.");
-    return;
-  }
-
   openModalBtn.addEventListener("click", function () {
     modalOverlay.classList.add("active");
   });
