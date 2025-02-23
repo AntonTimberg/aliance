@@ -2,7 +2,7 @@ const navbar = document.querySelector(".navbar");
 const logo = document.querySelector(".logo-svg use");
 const mMenuToggle = document.querySelector(".mobile-menu-toggle");
 const menu = document.querySelector(".mobile-menu");
-
+const isFront = document.body.classList.contains("front-page");
 const lightModeOn = () => {
   navbar.classList.add("navbar-light");
   logo.href.baseVal = "img/sprites.svg#logo";
@@ -12,6 +12,10 @@ const darkModeOn = () => {
   navbar.classList.remove("navbar-light");
   logo.href.baseVal = "img/sprites.svg#logo-light";
 };
+
+const changeNavHeight = (height) => {
+  navbar.style.height = height;
+}
 
 const openMenu = (event) => {
   menu.classList.add("is-open");
@@ -28,7 +32,10 @@ const closeMenu = (event) => {
 };
 
 window.addEventListener("scroll", () => {
-  window.scrollY > 1 ? lightModeOn() : darkModeOn();
+  window.scrollY > 1 ? changeNavHeight("4.5rem") : changeNavHeight("5.875rem");
+  if (isFront) {
+    window.scrollY > 1 ? lightModeOn() : darkModeOn();
+  }
 });
 
 mMenuToggle.addEventListener("click", (event) => {
@@ -169,4 +176,10 @@ document.addEventListener("DOMContentLoaded", function () {
       closeModal();
     }
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.location.pathname.includes("about.html")) {
+    document.querySelector(".navbar").classList.add("navbar-light");
+  }
 });
