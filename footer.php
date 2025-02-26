@@ -2,18 +2,18 @@
     <div class="bg-grey section-cta">
       <img src="img/bottle.png" alt="call to action" class="cta-image">
       <div class="cta-form-wrapper">
-        <form action="" class="cta-form">
+        <form action="handler.php" method="POST" class="cta-form">
           <h2 class="section-title cta-form-title">Хотите сотрудничать?</h2>
-          <p class="cta-form-text">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на все
+          <p class="cta-form-text">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на все
             интересующие вопросы и поможем даже в самых сложных случаях!</p>
           <div class="input-group-wrapper container">
             <div class="input-group">
-              <input id="user-name" type="text" class="input" placeholder=" ">
+              <input id="user-name" type="text" class="input" name="user-name" maxlength="100" placeholder=" " required>
               <label class="input-group-label" for="user-name">Имя</label>
             </div>
             <!--  1 -->
             <div class="input-group">
-              <input id="user-phone" type="tel" class="input" placeholder=" ">
+              <input id="user-phone" type="tel" class="input" name="user-phone" placeholder=" " maxlength="30" required>
               <label class="input-group-label" for="user-phone">Номер телефона</label>
             </div>
             <!--  2 -->
@@ -31,11 +31,10 @@
               </p>
             </div>
           </div>
-
         </form>
       </div>
     </div>
-  </section>
+</section>
 
   <footer class="footer">
     <div class="container">

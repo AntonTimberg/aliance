@@ -1,4 +1,4 @@
-<nav class="navbar" style="color: black;">
+<nav class="navbar" style="color: black; background-color: white;">
         <a href="#" class="mobile-menu-toggle">
             <div class="mobile-menu-line"></div>
             <div class="mobile-menu-line"></div>
