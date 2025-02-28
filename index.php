@@ -144,7 +144,7 @@
       <div class="header-content">
         <div class="separator"></div>
         <h1 class="header-title">
-          <?php echo "Главная страница"; ?>
+        Комплексное обеспечение товарами и расходными материалами бизнеса
         </h1>
         <p class="header-text">
           Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта:
@@ -546,6 +546,10 @@
 
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/just-validate.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.7/inputmask.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/just-validate/3.3.3/just-validate.min.js"></script>
+
 
 </body>
 

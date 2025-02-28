@@ -183,3 +183,120 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".navbar").classList.add("navbar-light");
   }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const forms = document.querySelectorAll('form');
+  
+  const modalOverlay = document.querySelector('.modal-overlay');
+  const modalClose = document.querySelector('.modal-close');
+  const returnToMainBtn = document.querySelector('#return-to-main');
+
+  forms.forEach(form => {
+    const validation = new JustValidate(form, {
+      errorFieldCssClass: 'is-invalid',
+    });
+
+    validation
+      .addField('[name="user-name"]', [
+        {
+          rule: 'required',
+          errorMessage: 'Укажите имя',
+        },
+        {
+          rule: 'maxLength',
+          value: 50,
+          errorMessage: 'Максимальная длина — 50 символов',
+        },
+      ])
+      .addField('[name="user-phone"]', [
+        {
+          rule: 'required',
+          errorMessage: 'Укажите телефон',
+        },
+        {
+          validator: (value) => {
+            const phoneDigits = value.replace(/\D/g, '');
+            return phoneDigits.length === 11;
+          },
+          errorMessage: 'Введите корректный номер телефона',
+        },
+      ])
+      .onSuccess((event) => {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+
+        fetch('handler.php', {
+          method: 'POST',
+          body: formData,
+        })
+          .then(response => response.text())
+          .then(data => {
+            if (data === 'success') {
+              console.log('Форма успешно отправлена');
+              modalOverlay.classList.add('active');
+              event.target.reset();
+            } else {
+              alert('Произошла ошибка при отправке формы');
+            }
+          })
+          .catch(error => {
+            console.error('Ошибка:', error);
+            alert('Произошла ошибка при отправке формы');
+          });
+      });
+  });
+
+  modalClose.addEventListener('click', () => {
+    modalOverlay.classList.add('closing');
+    setTimeout(() => {
+      modalOverlay.classList.remove('active', 'closing');
+    }, 300);
+  });
+
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) {
+      modalOverlay.classList.add('closing');
+      setTimeout(() => {
+        modalOverlay.classList.remove('active', 'closing');
+      }, 300);
+    }
+  });
+
+  returnToMainBtn.addEventListener('click', () => {
+    modalOverlay.classList.add('closing');
+    setTimeout(() => {
+      modalOverlay.classList.remove('active', 'closing');
+      window.location.href = '/index.php';
+    }, 300);
+  });
+});
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   const phoneInput = document.querySelector('input[name="user-phone"]');
+//   const phoneMask = new Inputmask('+7 (999) 999-99-99');
+//   phoneMask.mask(phoneInput);
+// });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var phoneInput = document.getElementById('user-phone');
+
+  phoneInput.addEventListener('input', function (e) {
+    var x = phoneInput.value.replace(/\D/g, '').match(/(\d{1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+    phoneInput.value = '+7 ' + (x[2] ? '(' + x[2] : '') + (x[3] ? ') ' + x[3] : '') + (x[4] ? '-' + x[4] : '') + (x[5] ? '-' + x[5] : '');
+  });
+
+  phoneInput.addEventListener('focus', function (e) {
+    if (phoneInput.value.length === 0) {
+      phoneInput.value = '+7 ';
+    }
+  });
+
+  phoneInput.addEventListener('blur', function (e) {
+    if (phoneInput.value === '+7 ') {
+      phoneInput.value = '';
+    }
+  });
+});

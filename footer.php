@@ -8,14 +8,16 @@
             интересующие вопросы и поможем даже в самых сложных случаях!</p>
           <div class="input-group-wrapper container">
             <div class="input-group">
-              <input id="user-name" type="text" class="input" name="user-name" maxlength="100" placeholder=" " required>
+              <input id="user-name" type="text" class="input" name="user-name" 
+              maxlength="100" placeholder=" " required>
               <label class="input-group-label" for="user-name">Имя</label>
             </div>
             <!--  1 -->
             <div class="input-group">
-              <input id="user-phone" type="tel" class="input" name="user-phone" placeholder=" " maxlength="30" required>
+              <input id="user-phone" type="tel" class="input" name="user-phone" placeholder=" " maxlength="30">
               <label class="input-group-label" for="user-phone">Номер телефона</label>
             </div>
+
             <!--  2 -->
           </div>
 
@@ -34,7 +36,25 @@
         </form>
       </div>
     </div>
-</section>
+
+    <div class="modal-overlay" id="success-modal-overlay">
+      <div class="modal" id="success-modal">
+      <button class="modal-close" id="modal-close">
+              <svg width="24" height="24">
+                  <use href="img/sprites.svg#closer"></use>
+              </svg>
+          </button>
+        <svg width="285" height="245.42" id="success-modal-woman">
+          <use href="img/sprites.svg#bwoman"></use>
+        </svg>
+         <h2 class="modal-title" id="success-modal-title">Спасибо за заявку!</h2>
+        <p class="modal-text" id="success-modal-text">
+           Наш менеджер свяжется с Вами в ближайшее время, ответит на все интересующие вопросы и поможет даже в самых сложных случаях!
+        </p>
+      <button type="button" class="custom-button" id="return-to-main">Вернуться на главную</button>
+     </div>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="container">
