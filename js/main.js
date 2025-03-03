@@ -149,21 +149,37 @@ buttonObserver.observe(document.querySelector('.cta-form-button'));
 
 document.addEventListener("DOMContentLoaded", function () {
   const modalOverlay = document.getElementById("modal-overlay");
+  const modal = document.getElementById("feedback-modal");
   const openModalBtn = document.querySelector("[data-toggle='modal']");
   const closeModalBtn = document.getElementById("modal-close");
+  const form = document.querySelector(".modal-form");
 
-  openModalBtn.addEventListener("click", function () {
+  function openModal() {
     modalOverlay.classList.add("active");
-  });
+    document.body.style.overflow = "hidden";
+  }
 
   function closeModal() {
     modalOverlay.classList.add("closing");
     setTimeout(() => {
       modalOverlay.classList.remove("active", "closing");
+      document.body.style.overflow = "";
     }, 300);
   }
 
-  closeModalBtn.addEventListener("click", closeModal);
+  if (openModalBtn) {
+    openModalBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      openModal();
+    });
+  }
+
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      closeModal();
+    });
+  }
 
   modalOverlay.addEventListener("click", function (event) {
     if (event.target === modalOverlay) {
@@ -176,7 +192,36 @@ document.addEventListener("DOMContentLoaded", function () {
       closeModal();
     }
   });
+
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch("handler.php", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => response.text())
+        .then((data) => {
+          if (data === "success") {
+            console.log("Форма успешно отправлена");
+            form.reset();
+            closeModal();
+          } else {
+            alert("Ошибка при отправке формы");
+          }
+        })
+        .catch((error) => {
+          console.error("Ошибка:", error);
+          alert("Ошибка при отправке формы");
+        });
+    });
+  }
 });
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   if (window.location.pathname.includes("about.html")) {
@@ -281,22 +326,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  var phoneInput = document.getElementById('user-phone');
+  var phoneInputs = document.querySelectorAll('#user-phone, #custom-user-phone');
 
-  phoneInput.addEventListener('input', function (e) {
-    var x = phoneInput.value.replace(/\D/g, '').match(/(\d{1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
-    phoneInput.value = '+7 ' + (x[2] ? '(' + x[2] : '') + (x[3] ? ') ' + x[3] : '') + (x[4] ? '-' + x[4] : '') + (x[5] ? '-' + x[5] : '');
-  });
+  phoneInputs.forEach(function (phoneInput) {
+    phoneInput.addEventListener('input', function (e) {
+      var x = phoneInput.value.replace(/\D/g, '').match(/(\d{1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+      phoneInput.value = '+7 ' + (x[2] ? '(' + x[2] : '') + (x[3] ? ') ' + x[3] : '') + (x[4] ? '-' + x[4] : '') + (x[5] ? '-' + x[5] : '');
+    });
 
-  phoneInput.addEventListener('focus', function (e) {
-    if (phoneInput.value.length === 0) {
-      phoneInput.value = '+7 ';
-    }
-  });
+    phoneInput.addEventListener('focus', function (e) {
+      if (phoneInput.value.length === 0) {
+        phoneInput.value = '+7 ';
+      }
+    });
 
-  phoneInput.addEventListener('blur', function (e) {
-    if (phoneInput.value === '+7 ') {
-      phoneInput.value = '';
-    }
+    phoneInput.addEventListener('blur', function (e) {
+      if (phoneInput.value === '+7 ') {
+        phoneInput.value = '';
+      }
+    });
   });
 });
