@@ -195,6 +195,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
       ])
       .onSuccess((event) => {
+        const feedbackModalOverlay = document.getElementById('modal-overlay');
         event.preventDefault();
 
         const formData = new FormData(event.target);
@@ -208,14 +209,12 @@ document.addEventListener('DOMContentLoaded', function () {
             if (data === 'success') {
               console.log('Форма успешно отправлена');
               modalOverlay.classList.add('active');
+              feedbackModalOverlay.classList.remove('active');
               event.target.reset();
-            } else {
-              alert('Произошла ошибка при отправке формы');
-            }
+            } 
           })
           .catch(error => {
             console.error('Ошибка:', error);
-            alert('Произошла ошибка при отправке формы');
           });
       });
   });
@@ -311,4 +310,6 @@ document.addEventListener('DOMContentLoaded', function () {
           event.preventDefault();
       }
   });
+
+  
 });
