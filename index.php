@@ -110,10 +110,10 @@
           <a href="./about.php" class="header-nav-link">О компании</a>
         </li>
         <li class="header-nav-item">
-          <a href="#" class="header-nav-link">Контрактное производство</a>
+          <a href="./contracts.php" class="header-nav-link">Контрактное производство</a>
         </li>
         <li class="header-nav-item">
-          <a href="#" class="header-nav-link">Собственные торговые марки</a>
+          <a href="./brands.php" class="header-nav-link">Собственные торговые марки</a>
         </li>
         <li class="header-nav-item">
           <a href="#" class="header-nav-link">Новости</a>
@@ -332,36 +332,7 @@
     </div>
   </section>
 
-  <section class="section trademark">
-    <div class="container">
-      <div class="separator"></div>
-      <div class="section-title">собственные торговые марки</div>
-
-      <div class="trademark-cards">
-
-        <div class="trademark-card">
-          <svg class="trademark-card-logo">
-            <use href="img/sprites.svg#AGTECH"></use>
-          </svg>
-          <h3 class="trademark-card-title">Автохимия AG-Tech</h3>
-          <p class="trademark-card-text">Для современного мира разбавленное изрядной долей эмпатии, рациональное
-            мышление создаёт предпосылки для поставленных обществом задач.</p>
-        </div>
-
-
-        <div class="trademark-card">
-          <svg class="trademark-card-logo">
-            <use href="img/sprites.svg#AP"></use>
-          </svg>
-          <!-- /.trademark-card-content -->
-          <h3 class="trademark-card-title">Автохимия AP</h3>
-          <p class="trademark-card-text">Для современного мира разбавленное изрядной долей эмпатии, рациональное
-            мышление создаёт предпосылки для поставленных обществом задач.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  <?php $block_title = 'собственные торговые марки'; include_once('./php_templates/trademarks_block.php'); ?>
 
   <section class="section founder">
     <img src="img/founder.jpg" alt="" class="founder-photo">

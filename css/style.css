@@ -1241,7 +1241,7 @@ div.notify:nth-child(5) > p:nth-child(2) {
 }
 
 .header-title {
-  /* margin: 0; */
+  margin: 1.5rem 0 0 0;
 }
 
 .section.production.about {
@@ -1269,6 +1269,7 @@ div.notify:nth-child(5) > p:nth-child(2) {
   display: flex;
   line-height: 0;
   font-family: sans-serif;
+  margin-bottom: 10px;
 }
 
 .navigator-link {
