@@ -214,3 +214,10 @@
           </div>
       </div>
   </div>
+
+
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/just-validate.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.7/inputmask.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/just-validate/3.3.3/just-validate.min.js"></script>

@@ -270,46 +270,67 @@ document.addEventListener('DOMContentLoaded', function () {
 // валидатор телефона
 
 document.addEventListener('DOMContentLoaded', function () {
-  const modal = document.getElementById('modal-overlay');
-  const openModalButtons = document.querySelectorAll('[data-toggle="modal"], .navbar-button');
-  const closeModalButton = document.getElementById('modal-close');
+  function initializeModal() {
+      const modal = document.getElementById('modal-overlay');
+      const closeModalButton = document.getElementById('modal-close');
+      
+      const openModalButtons = document.querySelectorAll('[data-toggle="modal"], .navbar-button, .button-link');
+      
+      if (!modal || !closeModalButton) {
+          console.warn('Модальное окно или кнопка закрытия не найдены');
+          return;
+      }
 
-  const nameInput = document.getElementById('custom-user-name');
-  const phoneInput = document.getElementById('custom-user-phone');
-  const form = document.querySelector('.modal-form');
+      const nameInput = document.getElementById('custom-user-name');
+      const phoneInput = document.getElementById('custom-user-phone');
+      const form = document.querySelector('.modal-form');
 
-  
-  function openModal() {
-      modal.classList.add('active');
+      function openModal() {
+          modal.classList.add('active');
+      }
+
+      function closeModal() {
+          modal.classList.remove('active');
+      }
+
+      openModalButtons.forEach(button => {
+          button.addEventListener('click', (e) => {
+              e.preventDefault();
+              openModal();
+          });
+      });
+
+      closeModalButton.addEventListener('click', closeModal);
+      modal.addEventListener('click', function (event) {
+          if (event.target === modal) {
+              closeModal();
+          }
+      });
+
+      if (form && nameInput && phoneInput) {
+          form.addEventListener('submit', function (event) {
+              const nameValue = nameInput.value.trim();
+              const phoneValue = phoneInput.value.trim();
+              const phoneValid = /^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/.test(phoneValue);
+
+              if (!nameValue || !phoneValue || !phoneValid) {
+                  event.preventDefault();
+                  alert('Пожалуйста, заполните все поля корректно');
+              }
+          });
+      }
   }
 
-  function closeModal() {
-      modal.classList.remove('active');
-  }
+  // Инициализация при загрузке
+  initializeModal();
 
-  // обработчики событий на кнопки открытия
-  openModalButtons.forEach(button => {
-      button.addEventListener('click', openModal);
+  const observer = new MutationObserver(() => {
+      initializeModal();
   });
 
-  closeModalButton.addEventListener('click', closeModal);
-
-  modal.addEventListener('click', function (event) {
-      if (event.target === modal) {
-          closeModal();
-      }
+  observer.observe(document.body, {
+      childList: true,
+      subtree: true
   });
-
-  form.addEventListener('submit', function (event) {
-      const nameValue = nameInput.value.trim();
-      const phoneValue = phoneInput.value.trim();
-
-      const phoneValid = /^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$/.test(phoneValue);
-
-      if (!nameValue || !phoneValue || !phoneValid) {
-          event.preventDefault();
-      }
-  });
-
-  
 });
+// модалка обратной связи
