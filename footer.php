@@ -214,35 +214,3 @@
           </div>
       </div>
   </div>
-
-  <!-- <div class="modal-overlay" id="modal-overlay">
-      <div class="modal" id="alert-modal">
-          <button class="modal-close" id="modal-close">
-              <svg width="24" height="24">
-                  <use href="img/sprites.svg#closer"></use>
-              </svg>
-          </button>
-          <h2 class="modal-title">Спасибо!</h2>
-          <p class="modal-text">
-              Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время, ответит на все интересующие вопросы и поможет даже в самых сложных случаях!
-          </p>
-              <div class="custom-input-group">
-                  <input id="custom-user-name" type="text" class="custom-input" name="user-name" placeholder=" ">
-                  <label class="custom-input-label" for="custom-user-name">Имя</label>
-              </div>
-              <div class="custom-input-group">
-                  <input id="custom-user-phone" type="tel" name="user-phone" class="custom-input"  placeholder=" ">
-                  <label class="custom-input-label" for="custom-user-phone">Номер телефона</label>
-              </div>
-              <button type="submit" class="custom-button">Отправить заявку</button>
-          </form>
-          <div class="notify">
-              <svg class="notify-icon" width="14" height="14">
-                  <use href="img/sprites.svg#shield"></use>
-              </svg>
-              <p class="notify-text">
-                  Обращаясь к нам, вы получаете не только<br> профессиональную работу, но и абсолютную<br> конфиденциальность информации!
-              </p>
-          </div>
-      </div>
-  </div> -->
