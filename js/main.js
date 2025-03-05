@@ -315,7 +315,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
               if (!nameValue || !phoneValue || !phoneValid) {
                   event.preventDefault();
-                  alert('Пожалуйста, заполните все поля корректно');
               }
           });
       }
