@@ -1,22 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    media="print" onload="this.media='all'">
+  
   <title>Aliance Production</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+  <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="css/swiper-bundle.min.css" as="style" onload="this.rel='stylesheet'">
+  
+  <noscript>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  </noscript>
+ 
+  <style>
+    .modal-overlay {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-out, visibility 0s 0.3s;
+  z-index: 10;
+}
+
+.modal-overlay.active {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease-out, visibility 0s 0s;
+}
+
+.modal {
+  background: white;
+  padding: 40px 50px;
+  max-width: 460px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.swiper {
+  min-height: 300px;
+}
+
+img {
+  aspect-ratio: 3 / 2;
+}
+  </style>
 </head>
 
-<body class="front-page">
-  <header class="header header-image">
 
+<body class="front-page">
+<header class="header header-image">
+    <picture>
+        <source type="image/webp" srcset="img/main_img.webp">
+        <source type="image/jpeg" srcset="img/main_img.png">
+        <img src="img/main_img.png" alt="фон">
+    </picture>
+
+
+          
     <div class="mobile-menu">
       <ul class="mobile-menu-nav">
         <li class="mobile-menu-nav-item">
@@ -280,7 +342,12 @@
             <p class="card-text">Безусловно, сплочённость команды профессионалов позволяет оценить значение форм
               воздействия.</p>
           </div>
-          <img src="img/metal.png" alt="Автомобильная химия" class="card-image">
+          <picture>
+      <source type="image/webp" srcset="img/metal.webp">
+      <source type="image/jpeg" srcset="img/metal.jpg">
+      <img src="img/metal.png" alt="Автомобильная химия" class="card-image">
+    </picture>
+          
         </a>
 
         <a href="#" class="card">
@@ -291,7 +358,12 @@
               независимые элементы.
             </p>
           </div>
-          <img src="img/losk.png" alt="Бытовая химия" class="card-image">
+          <picture>
+      <source type="image/webp" srcset="img/losk.webp">
+      <source type="image/jpeg" srcset="img/losk.jpg">
+      <img src="img/losk.png" alt="Бытовая химия" class="card-image">
+    </picture>
+          
         </a>
 
         <a href="#" class="card">
@@ -299,7 +371,12 @@
             <h3 class="card-title">Дезинфицирующие средства</h3>
             <p class="card-text">Лишь интерактивные прототипы призваны к ответу.</p>
           </div>
-          <img src="img/septar.png" alt="Дезинфицирующие средства" class="card-image">
+          <picture>
+      <source type="image/webp" srcset="img/septar.webp">
+      <source type="image/jpeg" srcset="img/septar.jpg">
+      <img src="img/septar.jpg" alt="Дезинфицирующие средства" class="card-image">
+    </picture>
+          
         </a>
 
         <a href="#" class="card">
@@ -308,7 +385,11 @@
             <p class="card-text">Безусловно, сплочённость команды профессионалов позволяет оценить значение форм
               воздействия.</p>
           </div>
-          <img src="img/septar.png" alt="Пищевые аэрозоли" class="card-image">
+          <picture>
+      <source type="image/webp" srcset="img/septar.webp">
+      <source type="image/jpeg" srcset="img/septar.jpg">
+      <img src="img/septar.jpg" alt="Дезинфицирующие средства" class="card-image">
+    </picture>
         </a>
 
         <a href="#" class="card">
@@ -316,7 +397,11 @@
             <h3 class="card-title">Косметическая продукция</h3>
             <p class="card-text">Лишь интерактивные прототипы призваны к ответу.</p>
           </div>
-          <img src="img/metal.png" alt="Косметическая продукция" class="card-image">
+          <picture>
+      <source type="image/webp" srcset="img/metal.webp">
+      <source type="image/jpeg" srcset="img/metal.jpg">
+      <img src="img/metal.png" alt="Автомобильная химия" class="card-image">
+    </picture>
         </a>
 
         <a href="#" class="card">
@@ -325,7 +410,12 @@
             <p class="card-text">А также стремящиеся вытеснить традиционное производство, нанотехнологии функционально
               разнесены на независимые элементы.</p>
           </div>
-          <img src="img/losk.png" alt="Краски аэрозольные" class="card-image">
+          <picture>
+      <source type="image/webp" srcset="img/losk.webp">
+      <source type="image/jpeg" srcset="img/losk.jpg">
+      <img src="img/losk.png" alt="Краски аэрозольные" class="card-image">
+    </picture>
+          
         </a>
       </div>
       <!-- /.cards -->
@@ -335,7 +425,11 @@
   <?php $block_title = 'собственные торговые марки'; include_once('./php_templates/trademarks_block.php'); ?>
 
   <section class="section founder">
+    <picture>
+      <source type="image/webp" srcset="img/founder.webp">
+      <source type="image/jpeg" srcset="img/founder.jpg">
     <img src="img/founder.jpg" alt="" class="founder-photo">
+    </picture>
     <div class="container">
       <div class="founder-content-wrapper">
         <div class="founder-content">
@@ -436,6 +530,7 @@
         </div>
         <!-- /.clients-content -->
         <div class="clients-logo">
+          
           <a href="#" class="clients-logo-item"><img src="img/Burger_King.png" alt="" class="clients-logo"></a>
           <a href="#" class="clients-logo-item"><img src="img/Burger_King.png" alt="" class="clients-logo"></a>
           <a href="#" class="clients-logo-item"><img src="img/Burger_King.png" alt="" class="clients-logo"></a>
@@ -461,7 +556,12 @@
         <div class="swiper-wrapper">
           <!-- Slides -->
           <a href="#" class="swiper-slide blog-card">
-            <img src="img/Blog/method.png" alt="" class="blog-card-image">
+            <picture>
+      <source type="image/webp" srcset="img/Blog/method.webp">
+      <source type="image/jpeg" srcset="img/Blog/method.jpg">
+      <img src="img/Blog/method.png" alt="" class="blog-card-image">
+
+    </picture>
             <div class="blog-card-content">
               <h3 class="blog-card-title">Современная методология разработки одухотворила всех причастных</h3>
               <p class="blog-card-text">
@@ -471,7 +571,11 @@
             </div>
           </a>
           <a href="#" class="swiper-slide blog-card">
-            <img src="img/Blog/pipeline.png" alt="" class="blog-card-image">
+            <picture>
+      <source type="image/webp" srcset="img/Blog/pipeline.webp">
+      <source type="image/jpeg" srcset="img/Blog/pipeline.jpg">
+      <img src="img/Blog/pipeline.png" alt="" class="blog-card-image">
+    </picture>
             <div class="blog-card-content">
               <h3 class="blog-card-title">Сложно сказать, почему жизнь прекрасна</h3>
               <p class="blog-card-text">
@@ -481,7 +585,12 @@
             </div>
           </a>
           <a href="#" class="swiper-slide blog-card">
-            <img src="img/Blog/method.png" alt="" class="blog-card-image">
+          <picture>
+      <source type="image/webp" srcset="img/Blog/method.webp">
+      <source type="image/jpeg" srcset="img/Blog/method.jpg">
+      <img src="img/Blog/method.png" alt="" class="blog-card-image">
+
+    </picture>
             <div class="blog-card-content">
               <h3 class="blog-card-title">Современная методология разработки одухотворила всех причастных</h3>
               <p class="blog-card-text">
@@ -515,13 +624,9 @@
 
   <?php include_once('footer.php'); ?>
 
-  <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/just-validate.production.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.7/inputmask.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/just-validate/3.3.3/just-validate.min.js"></script>
+  
 
-
+  
 </body>
 
 </html>

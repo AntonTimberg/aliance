@@ -1,6 +1,10 @@
 <section class="calltoaction">
     <div class="bg-grey section-cta">
+      <picture>
+      <source type="image/webp" srcset="img/bottle.webp">
+      <source type="image/jpeg" srcset="img/bottle.jpg">
       <img src="img/bottle.png" alt="call to action" class="cta-image">
+    </picture>
       <div class="cta-form-wrapper">
         <form action="handler.php" method="POST" class="cta-form">
           <h2 class="section-title cta-form-title">Хотите сотрудничать?</h2>
@@ -216,8 +220,12 @@
   </div>
 
 
-  <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/just-validate.production.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.7/inputmask.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/just-validate/3.3.3/just-validate.min.js"></script>
+  <script src="js/swiper-bundle.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/just-validate.production.min.js" defer></script>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.7/inputmask.min.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/just-validate/3.3.3/just-validate.min.js"></script>
+
+
+
