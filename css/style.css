@@ -1287,12 +1287,30 @@ div.notify:nth-child(5) > p:nth-child(2) {
   margin-top: 0;
 }
 
+div.footer-info:nth-child(3) > svg:nth-child(1) {
+  flex-shrink: 0;
+}
+
+#mail > rect:nth-child(1) {
+  flex-shrink: 0;
+}
+
+
+
 /* Медиа-запросы */
 @media (max-width: 2050px) {
   .section-cta {
     padding-top: 2.3rem;
     padding-bottom: 6rem;
     margin-top: 6rem;
+  }
+
+  .footer-info-address {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    hyphens: auto;
+    max-width: calc(100% - 7px);
   }
 
   .cta-image {
@@ -2249,6 +2267,19 @@ div.notify:nth-child(5) > p:nth-child(2) {
   .clients-logo-item:nth-child(9) {
     display: none;
   }
+
+  .footer-info-address {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    hyphens: auto;
+    max-width: calc(100% - 7px);
+  }
+
+  #feedback-modal {
+    padding: 40px 20px;
+  }
+
 }
 
 @media (max-width: 1200px) and (min-width: 768px) {
