@@ -58,9 +58,9 @@
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
-/* img {
+img {
   aspect-ratio: 3 / 2;
-} */
+}
   </style>
 </head>
 

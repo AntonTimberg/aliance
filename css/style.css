@@ -118,10 +118,6 @@ body {
   border-right: 0.0625rem solid rgba(235, 235, 240, 0.2);
   height: 100%;
 }
-/* div.swiper:nth-child(5) {
-  position: relative;
-  bottom: auto;
-} */
 
 .header-nav {
   display: flex;
@@ -308,8 +304,8 @@ body {
   font-size: 3rem;
   line-height: 120%;
   position: relative;
-  margin-bottom: 2.5rem;
-  margin-top: 1.625rem;
+  margin-bottom: 2.5rem !important;
+  margin-top: 1.625rem !important;
   font-weight: 600;
   font-display: swap;
 }
@@ -722,6 +718,9 @@ body {
   width: 40%;
   top: -78px;
 }
+.cta-image {
+  aspect-ratio: auto !important;
+}
 .section-title,
 .cta-form-title {
   font-size: 3.75rem;
@@ -745,6 +744,11 @@ body {
   margin-bottom: 2.75rem;
   max-width: 40rem;
 }
+
+.cta-form-title {
+  margin: 0 !important;
+}
+
 .input-group-wrapper {
   display: flex;
   gap: 1.875rem;
