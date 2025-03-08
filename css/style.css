@@ -118,6 +118,10 @@ body {
   border-right: 0.0625rem solid rgba(235, 235, 240, 0.2);
   height: 100%;
 }
+/* div.swiper:nth-child(5) {
+  position: relative;
+  bottom: auto;
+} */
 
 .header-nav {
   display: flex;

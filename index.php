@@ -58,13 +58,9 @@
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
-.swiper {
-  min-height: 300px;
-}
-
-img {
+/* img {
   aspect-ratio: 3 / 2;
-}
+} */
   </style>
 </head>
 
