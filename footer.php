@@ -1,4 +1,9 @@
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
     .modal-overlay {
   visibility: hidden;
   opacity: 0;
@@ -37,6 +42,9 @@ img {
   aspect-ratio: 3 / 2;
 }
   </style>
+</head>
+<body>
+
 <section class="calltoaction">
     <div class="bg-grey section-cta">
       <picture>
@@ -82,7 +90,7 @@ img {
 
     <div class="modal-overlay" id="success-modal-overlay">
       <div class="modal" id="success-modal">
-      <button class="modal-close" id="modal-close">
+      <button class="modal-close">
               <svg width="24" height="24">
                   <use href="img/sprites.svg#closer"></use>
               </svg>
@@ -143,7 +151,7 @@ img {
       </div>
 
     </div>
-    <hr color="#ebebf0" class="footer-separator">
+    <hr class="footer-separator">
 
     <div class="container">
       <div class="footer-bottom">
@@ -227,7 +235,7 @@ img {
 
   <div class="modal-overlay" id="modal-overlay">
       <div class="modal" id="feedback-modal">
-          <button class="modal-close" id="modal-close">
+          <button class="modal-close">
               <svg width="24" height="24">
                   <use href="img/sprites.svg#closer"></use>
               </svg>
@@ -268,3 +276,6 @@ img {
 
 
 
+
+</body>
+</html>

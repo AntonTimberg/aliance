@@ -1295,7 +1295,9 @@ div.footer-info:nth-child(3) > svg:nth-child(1) {
   flex-shrink: 0;
 }
 
-
+.footer-separator {
+  border-color: #ebebf0;
+}
 
 /* Медиа-запросы */
 @media (max-width: 2050px) {
