@@ -2280,6 +2280,13 @@ div.footer-info:nth-child(3) > svg:nth-child(1) {
     padding: 40px 20px;
   }
 
+  h2.modal-title:nth-child(2) {
+    padding-right: 80px;
+}
+
+#success-modal {
+  padding: 10px;
+}
 }
 
 @media (max-width: 1200px) and (min-width: 768px) {
