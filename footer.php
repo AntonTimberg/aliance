@@ -1,49 +1,11 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    .modal-overlay {
-  visibility: hidden;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.3s ease-out, visibility 0s 0.3s;
-  z-index: 10;
-}
-
-.modal-overlay.active {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.3s ease-out, visibility 0s 0s;
-}
-
-.modal {
-  background: white;
-  padding: 40px 50px;
-  max-width: 460px;
-  width: 100%;
-  position: relative;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transform: translateY(-50px);
-  opacity: 0;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-}
-
-img {
-  aspect-ratio: 3 / 2;
-}
-  </style>
-</head>
-<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  
+<!-- </head> -->
+<!-- <body> -->
 
 <section class="calltoaction">
     <div class="bg-grey section-cta">
@@ -90,7 +52,7 @@ img {
 
     <div class="modal-overlay" id="success-modal-overlay">
       <div class="modal" id="success-modal">
-      <button class="modal-close">
+      <button class="modal-close" id="modal-close">
               <svg width="24" height="24">
                   <use href="img/sprites.svg#closer"></use>
               </svg>
@@ -210,7 +172,7 @@ img {
         <!-- /footer-menu-wrapper -->
       </div>
     </div>
-    <hr color="#ebebf0" class="footer-separator">
+    <hr class="footer-separator">
     <div class="container">
       <div class="footer-wrapper">
         <div class="footer-legal">
@@ -235,7 +197,7 @@ img {
 
   <div class="modal-overlay" id="modal-overlay">
       <div class="modal" id="feedback-modal">
-          <button class="modal-close">
+          <button class="modal-close" id="modal-close-2">
               <svg width="24" height="24">
                   <use href="img/sprites.svg#closer"></use>
               </svg>
@@ -274,8 +236,14 @@ img {
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.7/inputmask.min.js"></script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/just-validate/3.3.3/just-validate.min.js"></script>
 
+<link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="css/swiper-bundle.min.css" as="style" onload="this.rel='stylesheet'">
+  
+  <noscript>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  </noscript>
 
 
-
-</body>
-</html>
+<!-- </body>
+</html> -->

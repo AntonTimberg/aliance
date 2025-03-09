@@ -21,6 +21,10 @@ body {
   font-display: swap;
 }
 
+img {
+  aspect-ratio: 3 / 2;
+}
+
 .mobile-menu {
   display: none;
 }
@@ -1079,7 +1083,7 @@ body {
   opacity: 1;
 }
 
-#success-modal-close {
+#success-modal-close, #modal-close-2 {
   position: absolute;
   top: 30px;
   right: 30px;

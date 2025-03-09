@@ -12,56 +12,10 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
     media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/modalStyle.css">
   
   <title>Aliance Production</title>
 
-  <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
-  <link rel="preload" href="css/swiper-bundle.min.css" as="style" onload="this.rel='stylesheet'">
-  
-  <noscript>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  </noscript>
- 
-  <style>
-    .modal-overlay {
-  visibility: hidden;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.3s ease-out, visibility 0s 0.3s;
-  z-index: 10;
-}
-
-.modal-overlay.active {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.3s ease-out, visibility 0s 0s;
-}
-
-.modal {
-  background: white;
-  padding: 40px 50px;
-  max-width: 460px;
-  width: 100%;
-  position: relative;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transform: translateY(-50px);
-  opacity: 0;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-}
-
-img {
-  aspect-ratio: 3 / 2;
-}
-  </style>
 </head>
 
 
