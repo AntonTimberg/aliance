@@ -26,7 +26,7 @@
 
 
 <body class="front-page">
-<header class="header header-image">
+  <header class="header header-image">
     <picture>
         <source type="image/webp" srcset="img/main_img.webp">
         <source type="image/jpeg" srcset="img/main_img.png">

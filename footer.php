@@ -236,8 +236,8 @@
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.7/inputmask.min.js"></script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/just-validate/3.3.3/just-validate.min.js"></script>
 
+<link rel="preload" href="css/swiper-bundle.min.css" as="style" onload="this.rel='stylesheet'">
 <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
-  <link rel="preload" href="css/swiper-bundle.min.css" as="style" onload="this.rel='stylesheet'">
   
   <noscript>
     <link rel="stylesheet" href="css/style.css">

@@ -1,0 +1,266 @@
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-display: swap;
+}
+
+.about-container {
+  padding: 5.875rem 5rem 0 5rem;
+}
+
+.expert_big_logo {
+  width: 480px;
+  height: 480px;
+  margin-right: 120px;
+  float: left;
+  display: block;
+}
+
+.we_experts > div:nth-child(1) {
+  height: auto;
+}
+
+.expertise-content {
+  overflow: hidden;
+  margin-top: 50px;
+  margin-bottom: 52px;
+}
+
+.separator {
+  height: 2px;
+  background-color: #000;
+margin-top: 50px;
+}
+
+.expertise-title {
+  font-size: 3.75rem;
+  font-weight: 1200;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #333;
+  font-family: "Bebas Neue Book";
+  src: url("../fonts/BebasNeueBook.woff") format("woff");
+  font-display: swap;
+}
+
+.expertise-text {
+  font-weight: normal;
+  font-display: swap;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.we_experts::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 1200px) {
+  .expert_logo {
+    float: none !important;
+    margin-right: 0 !important;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .expert_big_logo {
+    float: none !important; 
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 770px) {
+  .about-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .we_experts {
+    margin-bottom: 0 !important;
+  }
+
+  .expert_big_logo {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .header-features {
+    margin-top: 0;
+  }
+  .expertise-title {
+    font-size: 36px
+  }
+  .swiper-wrapper {
+    margin-top: 0;
+  }
+
+  .expert_big_logo {
+    float: none;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .expert_big_logo {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    max-width: 480px;
+    object-fit: cover;
+  }
+}
+
+.we_experts::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.swiper-slide {
+  color: #292D33;
+}
+
+.features-slider .swiper-slide.header-features-item {
+  border-color: #EBEBF0;
+}
+
+
+.we_experts {
+  margin-bottom: 100px;
+}
+
+
+.slider-buttons {
+  border-color: #EBEBF0;
+}
+
+
+.slider-buttons .slider-button-prev,
+.slider-buttons .slider-button-next {
+  border-color: #EBEBF0;
+}
+
+.slider-button-prev use,
+.slider-button-next use {
+  fill: #666 !important;
+  stroke: #666 !important;
+}
+
+.our-production {
+  padding: 135px 0;
+}
+
+.our-production-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 119px;
+  justify-content: flex-start;
+}
+
+.our-production-content {
+  flex: 0 1 auto;
+}
+
+.our-production-content .section-title {
+  font-size: 3.75rem;
+  margin-bottom: 20px;
+}
+
+.our-production-content .section-text {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.production-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+}
+
+.production-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.our-production-image {
+  flex: 0 0 auto;
+  text-align: left;
+}
+
+.our-production-image picture img {
+  display: block;
+  width: 600px;
+  height: 750px;
+}
+
+
+@media (max-width: 1200px) {
+  .our-production-wrapper {
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 0;
+  }
+  .our-production-content {
+    display: contents;
+  }
+  .our-production-content > .separator,
+  .our-production-content > .section-title {
+    order: 1;
+   
+  }
+  .our-production-image {
+    order: 2;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .our-production-content > .section-text,
+  .our-production-content > .production-list {
+    order: 3;
+  }
+  .production-list {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 770px) {
+  .our-production-image picture img {
+    width: 345px;
+    height: 430px;
+  }
+
+  .section-title {
+    margin-bottom: 0;
+  }
+
+  .our-production {
+    padding: 75px 0 100px;
+  }
+}
+
+
+.founder-content {
+  padding-top: 0;
+}
+
+.clients-content > h2:nth-child(1) {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+section.section:nth-child(4) {
+  margin-top: 0;
+}
