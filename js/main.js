@@ -333,3 +333,19 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 // модалка обратной связи
+
+const swiperResearchGallery = new Swiper(".research-gallery-slider", {
+  speed: 400,
+  slidesPerView: "auto",
+  slidesPerGroup: 1,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".research-gallery-button-next",
+    prevEl: ".research-gallery-button-prev",
+  },
+  breakpoints: {
+    769: {
+      spaceBetween: 30,
+    },
+  },
+});
