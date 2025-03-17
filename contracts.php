@@ -17,6 +17,12 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
 <meta name="apple-mobile-web-app-title" content="Alliance Production" />
 <link rel="manifest" href="/img/favicon/site.webmanifest" />
+
+<link rel="preload" href="css/contractsStyle.css" as="style" onload="this.rel='stylesheet'">
+  
+  <noscript>
+    <link rel="stylesheet" href="css/contractsStyle.css">
+  </noscript>
 </head>
 
 <body>
@@ -83,7 +89,27 @@ include_once('header-page.php'); ?>
           </div>
           <!-- /.cards -->
         </div>
+
+        <section class="section seo-section">
+    <h3 class="seo-title">SEO Заголовок</h3>
+    <p class="seo-text">Также как дальнейшее развитие различных форм деятельности предполагает независимые способы 
+      реализации существующих финансовых и административных условий. Каждый из нас понимает очевидную 
+      вещь: курс на социально-ориентированный национальный проект играет важную роль в формировании 
+      как самодостаточных, так и внешне зависимых концептуальных решений. Внезапно, интерактивные 
+      прототипы набирают популярность среди определенных слоев населения, а значит, должны быть...</p>
+      <a href="#" class="seo-more">
+        <svg width="24" height="24" aria-hidden="true">
+          <use xlink:href="img/sprites.svg#reverse"></use>
+        </svg>
+        Читать больше
+      </a>
+
+    </section>  
       </section>
+
+
+  
+      
 
       <?php include_once('footer.php'); ?>
 

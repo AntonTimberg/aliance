@@ -1,0 +1,76 @@
+.section > div:nth-child(1) {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+@media (max-width: 768px) {
+    .section > div:nth-child(1) {
+        margin-top: 50px;
+    }
+}
+
+.seo-section {
+    padding: 50px 15rem;
+    text-align: left;
+  }
+  
+  .seo-title {
+    font-family: "Noto Sans", sans-serif;
+    font-display: swap;
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: normal;
+  }
+  
+  .seo-text {
+    font-family: "Noto Sans", sans-serif;
+    font-display: swap;
+    font-size: 16px;
+    color: #828A99;
+    margin-bottom: 20px;
+  }
+  
+  .seo-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #5C8EE6;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .seo-more:hover {
+    text-decoration: underline;
+  }
+  
+  .seo-more svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .section {
+        /* margin-top: 50px; */
+    }
+    .seo-section {
+      padding: 0;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-top: 50px !important;
+    }
+    
+
+    section.section:nth-child(4) > div:nth-child(1) {
+        margin-bottom: 50px;
+    }
+    .seo-title {
+      margin-bottom: 20px;
+    }
+    
+    .seo-text {
+      margin-bottom: 20px;
+    }
+  }

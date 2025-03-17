@@ -1,0 +1,133 @@
+.blog-posts {
+    margin-top: 100px;
+  }
+  
+  .blog-posts-wrapper {
+    width: 1440px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 705px);
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+
+    margin-bottom: 0;
+  }
+  
+  .blog-card {
+    position: relative;
+    width: 705px;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .blog-card-gray .blog-card-content {
+
+    top: 200px;
+    bottom: 50px;
+    left: 50px;
+    right: 50px;
+  }
+  
+  .blog-card-other .blog-card-content {
+    top: 250px;
+    bottom: 50px;
+    left: 50px;
+    right: 50px;
+    
+  }
+  
+  .blog-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .blog-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+  }
+  
+  .blog-card-content {
+    position: absolute;
+    color: #fff;
+
+  }
+  
+  .blog-card-title {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    font-family: "Noto Sans", sans-serif;
+  font-display: swap;
+  }
+  
+  .blog-card-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    font-family: "Noto Sans", sans-serif;
+  font-display: swap;
+  }
+  
+  .pagination {
+    position: absolute;
+    width: 230px;
+    height: 50px;
+    right: 30px;
+    bottom: -100px;
+  }
+  
+  .pagination-list {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: "Noto Sans", sans-serif;
+  font-display: swap;
+  }
+  
+  .pagination-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  
+  .pagination-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    color: #333;
+    border: 1px solid transparent;
+    text-decoration: none;
+  }
+  
+  .pagination-item a:hover {
+    color: #5C8EE6;
+  }
+  
+  .pagination-item.active a {
+    border: 1px solid #5C8EE6;
+    color: #5C8EE6;
+  }
+  div.blog-card {
+    padding: 0;
+  }
+
+  .section {
+    margin-bottom: 20.25rem !important;
+  }
+
+  .blog-card:hover {
+    border: 3px solid #5C8EE6;
+  }
