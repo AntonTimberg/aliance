@@ -44,7 +44,7 @@
           <a href="#" class="mobile-menu-link">Контрактное производство</a>
           <ul class="mobile-submenu">
             <li class="mobile-submenu-item">
-              <a class="mobile-submenu-link" href="#">Автомобильная химия</a>
+              <a class="mobile-submenu-link" href="/autoChem.php">Автомобильная химия</a>
             </li>
             <li class="mobile-submenu-item">
               <a class="mobile-submenu-link" href="#">Бытовая химия</a>
@@ -75,10 +75,10 @@
           </ul>
         </li>
         <li class="mobile-menu-nav-item">
-          <a href="#" class="mobile-menu-link">Новости</a>
+          <a href="./news.php" class="mobile-menu-link">Новости</a>
         </li>
         <li class="mobile-menu-nav-item">
-          <a href="#" class="mobile-menu-link">Контакты</a>
+          <a href="./contacts.php" class="mobile-menu-link">Контакты</a>
         </li>
       </ul>
       <a href="tel:+79999999999" class="mobile-phone">+7 (999) 999-99-99</a>
@@ -134,10 +134,10 @@
           <a href="./brands.php" class="header-nav-link">Собственные торговые марки</a>
         </li>
         <li class="header-nav-item">
-          <a href="#" class="header-nav-link">Новости</a>
+          <a href="./news.php" class="header-nav-link">Новости</a>
         </li>
         <li class="header-nav-item">
-          <a href="#" class="header-nav-link">Контакты</a>
+          <a href="./contacts.php" class="header-nav-link">Контакты</a>
         </li>
       </ul>
       <div class="header-phone">
