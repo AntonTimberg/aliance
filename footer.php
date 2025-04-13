@@ -121,22 +121,22 @@
           <h2 class="footer-menu-title">Контрактное производство</h2>
           <ul class="footer-menu-list footer-menu-column-2">
             <li class="footer-menu-item">
-              <a href="" class="footer-menu-link">Автомобильная химия</a>
+              <a href="/autoChem.php" class="footer-menu-link">Автомобильная химия</a>
             </li>
             <li class="footer-menu-item">
-              <a href="" class="footer-menu-link">Бытовая химия</a>
+              <a href="#" class="footer-menu-link">Бытовая химия</a>
             </li>
             <li class="footer-menu-item">
-              <a href="" class="footer-menu-link">Дезинфицирующие средства</a>
+              <a href="#" class="footer-menu-link">Дезинфицирующие средства</a>
             </li>
             <li class="footer-menu-item">
-              <a href="" class="footer-menu-link">Пищевые аэрозоли</a>
+              <a href="#" class="footer-menu-link">Пищевые аэрозоли</a>
             </li>
             <li class="footer-menu-item">
-              <a href="" class="footer-menu-link">Косметическая продукция</a>
+              <a href="#" class="footer-menu-link">Косметическая продукция</a>
             </li>
             <li class="footer-menu-item">
-              <a href="" class="footer-menu-link">Краски аэрозольные</a>
+              <a href="#" class="footer-menu-link">Краски аэрозольные</a>
             </li>
           </ul>
 
@@ -179,7 +179,7 @@
           <p class="footer-copyright">
             &copy; <?php echo date('Y')?> "Aliance Production". Все права защищены.
           </p>
-          <a href="#" class="footer-policy">Политики конфиденциальности</a>
+          <a href="/politics.php" class="footer-policy">Политики конфиденциальности</a>
         </div>
         <div class="footer-author">
           <span class="made-in">Сделано в</span>

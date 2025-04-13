@@ -349,3 +349,4 @@ const swiperResearchGallery = new Swiper(".research-gallery-slider", {
     },
   },
 });
+
