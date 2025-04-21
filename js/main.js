@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
   function initializeModal() {
       const modal = document.getElementById('modal-overlay');
-      const closeModalButton = document.getElementById('modal-close');
+      const closeModalButton = document.getElementById('modal-close-2');
       
       const openModalButtons = document.querySelectorAll('[data-toggle="modal"], .navbar-button, .button-link');
       
